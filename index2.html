@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Cadastro de Visitantes</title>
+  <style>
+    /* Estilos para o formulário de cadastro */
+    #cadastroForm {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f0f8ea;
+      border: 1px solid #4c704f;
+      border-radius: 5px;
+    }
+
+    /* Estilos para os campos do formulário */
+    #cadastroForm input[type="text"],
+    #cadastroForm input[type="tel"],
+    #cadastroForm select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #4c704f;
+      border-radius: 5px;
+    }
+
+    /* Estilos para as mensagens de erro */
+    #cadastroForm input:invalid,
+    #cadastroForm select:invalid {
+      border-color: #ff6347;
+    }
+
+    #cadastroForm input:invalid::placeholder,
+    #cadastroForm select:invalid::placeholder {
+      color: #ff6347;
+    }
+
+    /* Estilos para o botão de envio */
+    #cadastroForm button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4c704f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Estilos para as mensagens de sucesso */
+    #cadastroForm .success {
+      margin-top: 10px;
+      color: #4c704f;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form id="cadastroForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+    <label for="cidadeOrigem">Cidade de Origem:</label>
+    <input type="text" id="cidadeOrigem" name="cidadeOrigem" required>
+    <label for="bairroondemora">Bairro onde mora:</label>
+    <input type="text" id="bairroondemora" name="bairroondemora" required>
+    <label for="status">Status:</label>
+    <select id="status" name="status" required>
+      <option value="">Selecione</option>
+      <option value="membroAtivo">Membro Ativo</option>
+      <option value="emContato">Em Contato</option>
+      <option value="desistente">Desistente</option>
+    </select>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script>
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+      var nome = document.getElementById('nome').value;
+      var telefone = document.getElementById('telefone').value;
+      var cidadeOrigem = document.getElementById('cidadeOrigem').value;
+      var cidadeMoradia = document.getElementById('cidadeMoradia').value;
+      var status = document.getElementById('status').value;
+    
+       // Realizar validação dos campos (exemplo: garantir que não estejam vazios)
+       if (nome === '' || telefone === '' || cidadeOrigem === '' || cidadeMoradia === '' || status === '') {
+        alert('Por favor, preencha todos os campos obrigatórios!');
+        event.preventDefault(); // Impede o envio do formulário se houver campos vazios
+        return;
+      }
+      
+      // Processar o formulário (aqui você pode implementar a lógica de envio para o servidor)
+      alert('Formulário de cadastro enviado com sucesso!');
+    });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro de Visitantes</title>
+  <!-- Estilos CSS -->
+  <style>
+    /* Estilos aqui */
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Visitantes</h1>
+  <form id="formulario">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <br>
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" required>
+    <br>
+    <label for="cidadeOrigem">Cidade de Origem:</label>
+    <input type="text" id="cidadeOrigem" name="cidadeOrigem" required>
+    <br>
+    <label for="cidadeMoradia">Cidade de Moradia:</label>
+    <input type="text" id="cidadeMoradia" name="cidadeMoradia" required>
+    <br>
+    <label for="status">Status:</label>
+    <select id="status" name="status" required>
+      <option value="">Selecione o status</option>
+      <option value="membroAtivo">Membro Ativo</option>
+      <option value="emContato">Em Contato</option>
+      <option value="desistente">Desistente</option>
+    </select>
+    <br>
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao"></textarea>
+    <br>
+    <label for="numeracao">Numeração:</label>
+    <input type="number" id="numeracao" name="numeracao">
+    <br>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Scripts JavaScript -->
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impedir o envio do formulário para fins de demonstração
+
+      // Obter os valores dos campos do formulário
+      var nome = document.getElementById('nome').value;
+      var telefone = document.getElementById('telefone').value;
+      var cidadeOrigem = document.getElementById('cidadeOrigem').value;
+      var cidadeMoradia = document.getElementById('cidadeMoradia').value;
+      var status = document.getElementById('status').value;
+      var descricao = document.getElementById('descricao').value;
+      var numeracao = document.getElementById('numeracao').value;
+
+      // Realizar validação dos campos (exemplo: garantir que não estejam vazios)
+      if (nome === '' || telefone === '' || cidadeOrigem === '' || cidadeMoradia === '' || status === '') {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+      } else {
+        // Enviar os dados do formulário para o servidor (aqui você pode implementar o envio para o banco de dados)
+        alert('Formulário enviado com sucesso!');
+        // Redirecionar ou executar outras ações após o envio do formulário
+        // Exemplo: window.location.href = 'pagina-de-sucesso.html';
+      }
+    });
+  </script>
+</body>
+</html>
