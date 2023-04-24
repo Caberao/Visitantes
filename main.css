@@ -1,0 +1,51 @@
+/* Estilos para o formulário de cadastro */
+#cadastroForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f8ea;
+    border: 1px solid #4c704f;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para os campos do formulário */
+  #cadastroForm input[type="text"],
+  #cadastroForm input[type="tel"],
+  #cadastroForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4c704f;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para as mensagens de erro */
+  #cadastroForm input:invalid,
+  #cadastroForm select:invalid {
+    border-color: #ff6347;
+  }
+  
+  #cadastroForm input:invalid::placeholder,
+  #cadastroForm select:invalid::placeholder {
+    color: #ff6347;
+  }
+  
+  /* Estilos para o botão de envio */
+  #cadastroForm button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4c704f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para as mensagens de sucesso */
+  #cadastroForm .success {
+    margin-top: 10px;
+    color: #4c704f;
+    text-align: center;
+  }
+  

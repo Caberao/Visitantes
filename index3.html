@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro de Visitantes</title>
+  <style>
+    body {
+      background-color: #ffffff; /* cor de fundo branca */
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #eaf2e3; /* cor de fundo verde musgo */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label, input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50; /* cor de fundo verde */
+      color: #ffffff; /* cor do texto branco */
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    .success-msg {
+      margin-top: 10px;
+      background-color: #d4edda; /* cor de fundo verde claro */
+      color: #155724; /* cor do texto verde escuro */
+      padding: 10px;
+      border: 1px solid #c3e6cb; /* cor da borda verde claro */
+    }
+
+    .error-msg {
+      margin-top: 10px;
+      background-color: #f8d7da; /* cor de fundo vermelho claro */
+      color: #721c24; /* cor do texto vermelho escuro */
+      padding: 10px;
+      border: 1px solid #f5c6cb; /* cor da borda vermelho claro */
+    }
+  </style>
+</head>
+<body>
+  <form id="cadastro-form" action="cadastrar.php" method="post">
+    <h1>Cadastro de Visitantes</h1>
+    <label for="numero">Número de Visitante:</label>
+    <input type="text" id="numero" name="numero" readonly>
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="data_nascimento">Data de Nascimento:</label>
+    <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="cidade_origem">Cidade de Origem:</label>
+    <input type="text" id="cidade_origem" name="cidade_origem" required>
+
+    <label for="cidade_atual">Onde Mora Atualmente:</label>
+    <input type="text" id="cidade_atual" name="cidade_atual" required>
+
+    <label for="status">Status:</label>
+    <select id="status" name="status" required>
+      <option value="membro_ativo">Membro Ativo</option>
+      <option value="em_contato">Em Contato</option>
+      <option value="desistente"
+      <label for="mensagem">Mensagem:</label>
+<textarea id="mensagem" name="mensagem"></textarea>
+
+<input type="submit" value="Cadastrar">
+
+<div id="mensagem-resultado" class="success-msg" style="display: none;"></div>
+
